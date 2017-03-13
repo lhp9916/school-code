@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的主页</title>
+<script language="javascript">
+var mess;
+var day=new Date();
+var h=day.getHours();
+if((h>4)&&(h<=12))
+{
+	mess="上午好！";
+}
+else if((h>12)&&(h<18))
+{
+	mess="下午好";
+}
+else
+{
+	mess="晚上好！";
+}
+var isMonth=new Array("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+var isDay=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+Year=day.getFullYear();
+Mouth=day.getMonth();
+Day=day.getDate();
+document.title=mess+"今天是"+Year+"年"+isMonth[day.getMonth()]+Day+"日"+isDay[day.getDay()];
+</script>
+
+<style type="text/css">
+body { font-family:Verdana; font-size:14px; margin:0; background-image;}
+
+#container {margin:0 auto; width:900px; margin-top:10px;}
+#header { height:190px; margin-bottom:4px;}
+#mainContent { height:400px; margin-bottom:5px;}
+#sidebar { float:left; width:200px; height:400px; background:#9ff;}
+#content { float:right; width:695px; height:400px; background:#cff; font-family:"隶书";}
+#footer { height:40px; background:#6cf; text-align:center;}
+#hed{width:900px; height:186;}
+ul{font-size:24px;}
+h2{font-size:36px; color:red; text-align:center;}
+h4{font-size:25px; color:blue; text-align:center;}
+p{font-size:28px; color:#000; text-align:left; text-indent:2em;}
+li{list-style:none;}
+a{ text-decoration:none;}
+a:hover { 
+text-decoration: underline; 
+color: #FF0000; 
+} 
+</style>
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><img id="hed" src="images/banner.jpg" /></div>
+  <div id="mainContent">
+    <div id="sidebar">
+    <ul>
+        <li><a href="pages/myIntroduction.html">自我介绍</a></li>
+        <li><a href="pages/myHometown.html">我的家乡</a></li>
+        <li><a href="pages/mySchool.html">我的学校</a></li>
+        <li><a href="pages/myMusic.html">我的音乐</a></li>
+        <li><a href="pages/lxfs.html">联系方式</a></li>
+    </ul>
+    </div>
+    
+    <div id="content">
+    <h2>满江红·怒发冲冠</h2>
+    <h4>岳飞</h4>
+    <p>怒发冲冠，凭栏处，潇潇雨歇。抬望眼，仰天长啸，壮怀激烈。三十功名尘与土，八千里路云和月。莫等闲，白了少年头，空悲切！</p>
+    <p>靖康耻，犹未雪；臣子恨，何时灭?驾长车，踏破贺兰山缺！壮志饥餐胡虏肉，笑谈渴饮匈奴血。待从头，收拾旧山河，朝天阙！</p>
+    </div>
+  </div>
+  <div id="footer">制作人：刘海朋 &nbsp;&nbsp;  班级：计专11201 &nbsp;&nbsp;学号：201200014<br />
+  <script language="javascript">
+  <!--
+			 function set1(){ document.bgColor="#CDC1C5";}
+			 function set2(){ document.bgColor="#BF3EFF";}
+			 function set3(){ document.bgColor="white";}
+ -->
+ </script>
+  简单换肤功能：
+  <input type="button" value="浅灰色" onclick="set1()"  />
+  <input type="button" value="紫色" onclick="set2()"  />
+  <input type="button" value="还原" onclick="set3()"  />         
+  </div>
+</div>
+</body>
+</html>
